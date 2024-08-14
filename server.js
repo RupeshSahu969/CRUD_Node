@@ -10,10 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use("/", userRoutes);
-app.get("/",(req,res)=>{
-    res.send("Hello from user route");
-})
+app.use("/", userRoutes);
 
 app.listen(8080, async () => {
   try {
